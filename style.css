@@ -1,4 +1,4 @@
-#black{
+/* #black{
     background-color:black;
 }
 #purple{
@@ -9,7 +9,7 @@
 }
 #green{
     background-color: green;
-}
+} */
 .color{
     border: 1px solid black;
     display: inline-block;
