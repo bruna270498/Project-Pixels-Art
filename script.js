@@ -23,7 +23,14 @@ function atribuicao(){
     const cor2= document.getElementById('purple').style.backgroundColor=gerarCor();
     const cor3= document.getElementById('blue').style.backgroundColor=gerarCor();
     const cor4=document.getElementById('green').style.backgroundColor=gerarCor();
+    const cores =[cor1,cor2,cor3,cor4];
+    const botao = cores;
+    const btn = JSON.stringify(botao);
+    window.localStorage.setItem('colorPalette',btn);
+    localStorage.getItem(btn);
+    console.log(btn)
 }
+// atribuicao();
 
 
 
