@@ -13,24 +13,20 @@
 .color{
     border: 1px solid black;
     display: inline-block;
-    padding-left: 100px;
-    padding-top: 100px;
+    padding-left: 40px;
+    padding-top: 40px;
 }
 #pixel-board{
-    width: 400px;
-    height: 400px;
+    width: 240px;
+    height: 235px;
     border: 1px solid black;
     text-align: center;
-    padding-top: 20px;
-    /* width:400px
-    padding-top: 100px;
-    padding-left: 2px;
-    border: 1px solid black; */
+    padding-top: 10px;
 }
 .pixel{
    
-    padding-top: 70px;
-    padding-right: 70px;
+    width: 40px;
+    height: 40px;
     border: 1px solid black;
     display: inline-block;
     margin-top: 0;

@@ -25,4 +25,17 @@ function atribuicao() {
     localStorage.setItem('colorPalette', JSON.stringify([cor1,cor2,cor3,cor4]));
     window.onload = JSON.parse(localStorage.getItem('colorPalette'));
 }
+// function criarQuadrado() {
+//     const pai = document.getElementById('quadrado');
+//     const conteiner = document.createElement('div');
+//     conteiner.id = 'pixel-board';
+//     pai.appendChild(conteiner);
+// for( let pixel = 1; pixel = 25; pixel += 1){
+//     const pixelArts = document.createElement('div');
+//     pixelArts.classList.add('pixel');
+//     conteiner.appendChild(pixelArts);
+//     console.log(pixelArts)
 
+// }
+// }
+// criarQuadrado()
