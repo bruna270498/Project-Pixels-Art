@@ -27,8 +27,8 @@ function atribuicao(){
     const botao = cores;
     const btn = JSON.stringify(botao);
     window.localStorage.setItem('colorPalette',btn);
-    localStorage.getItem(btn);
-    console.log(btn)
+    
+    console.log (btn)
 }
 // atribuicao();
 
