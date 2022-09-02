@@ -16,3 +16,26 @@
     padding-left: 100px;
     padding-top: 100px;
 }
+#pixel-board{
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    text-align: center;
+    padding-top: 20px;
+    /* width:400px
+    padding-top: 100px;
+    padding-left: 2px;
+    border: 1px solid black; */
+}
+.pixel{
+   
+    padding-top: 70px;
+    padding-right: 70px;
+    border: 1px solid black;
+    display: inline-block;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    background-color: white;
+}
