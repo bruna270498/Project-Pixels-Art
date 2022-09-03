@@ -26,19 +26,20 @@ function atribuicao() {
     window.onload = JSON.parse(localStorage.getItem('colorPalette'));
 }
 function a (){
-    let c = document.getElementById('black')
-    let g = document.getElementById('blue')
-    let j = [c,g]
-    for(let o of j){
-        o.addEventListener('click', function(){
-            if( o   === 'selected'){
-            o = this.className = 'color'
-          console.log(o)}else{ console.log(o=this.className='selected')}
-        })
-    }
-    for(let u of o)
-}a()
-function b() {
-    a()
-   
-}
+    let barra = document.querySelectorAll(".color");
+
+barra.forEach((item)=>{
+
+    
+    item.addEventListener("click", function(e) {
+        e.preventDefault();
+      
+        barra.forEach((i) => {
+            if(i != this){
+
+                console.log(i.classList.remove("selected"));
+            }else(console.log(i.classList.toggle('selected')))
+        }); 
+    })
+  });
+}a();
