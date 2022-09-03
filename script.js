@@ -25,21 +25,20 @@ function atribuicao() {
     localStorage.setItem('colorPalette', JSON.stringify([cor1,cor2,cor3,cor4]));
     window.onload = JSON.parse(localStorage.getItem('colorPalette'));
 }
-// function criarQuadrado() {
-    
-function trocarClasse() {
-    const black = document.getElementById('black');
-    addEventListener('dblclick', function(){
-        black.className = 'selected';
-        console.log(black)
-    })
+function a (){
+    let c = document.getElementById('black')
+    let g = document.getElementById('blue')
+    let j = [c,g]
+    for(let o of j){
+        o.addEventListener('click', function(){
+            if( o   === 'selected'){
+            o = this.className = 'color'
+          console.log(o)}else{ console.log(o=this.className='selected')}
+        })
+    }
+    for(let u of o)
+}a()
+function b() {
+    a()
+   
 }
-trocarClasse();
-function trocarClasses() {
-    const bla = document.getElementById('blue');
-    addEventListener('dblclick', function(){
-        black.className = 'selected';
-        console.log(bla)
-    })
-}
-trocarClasses();
