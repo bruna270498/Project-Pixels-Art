@@ -23,8 +23,24 @@ function atribuicao() {
     const cor3 = document.getElementById('blue').style.backgroundColor=gerarCor();
     const cor4 = document.getElementById('green').style.backgroundColor=gerarCor();
     localStorage.setItem('colorPalette', JSON.stringify([cor1,cor2,cor3,cor4]));
-    window.onload = JSON.parse(localStorage.getItem('colorPalette'));
+    // window.onload = JSON.parse(localStorage.getItem('colorPalette'));
+    console.log(JSON.stringify([cor1,cor2,cor3,cor4]))
+
 }
+function devolverCor() {
+    let cor1 = document.getElementById('black');
+    let cor2 = document.getElementById('purple')
+    let cor3 = document.getElementById('blue')
+    let cor4 = document.getElementById('green')
+    let cores = [cor1, cor2, cor3, cor4]
+    cores = JSON.parse(localStorage.getItem('colorPalette'))
+    cor1.style.backgroundColor = cores[0];
+    cor2.style.backgroundColor = cores[1];
+    cor3.style.backgroundColor = cores[2];
+    cor4.style.backgroundColor = cores[3];
+}
+window.onload = devolverCor()
+
 // function a (){
 
 //     let barra = document.querySelectorAll(".color");
@@ -44,26 +60,26 @@ function atribuicao() {
 //     })
 //   });
 // }a();
-function n () {
-    let a = document.querySelectorAll('.color');
-    for (let e of a){
-    e.addEventListener('click', function () {
-        if( a != 'color'){
-            e.classList.remove('selected')
-        }
-        e.classList.toggle('selected');
-        // console.log(e)
-        return e
-    })
-    }
+// function n () {
+//     let a = document.querySelectorAll('.color');
+//     for (let e of a){
+//     e.addEventListener('click', function () {
+//         if( a != 'color'){
+//             e.classList.remove('selected')
+//         }
+//         e.classList.toggle('selected');
+//         // console.log(e)
+//         return e
+//     })
+//     }
  
-}n ();
+// }n ();
 
-function limpar() {
-    let botao = document.getElementById('clear-board');
-    let pixels = document.querySelectorAll('.pixel');
-    if (pixels != 'white'){
-        console.log('diferente')
-    }else {console.log('igual')}
+// function limpar() {
+//     let botao = document.getElementById('clear-board');
+//     let pixels = document.querySelectorAll('.pixel');
+//     if (pixels != 'white'){
+//         console.log('diferente')
+//     }else {console.log('igual')}
    
-}limpar()
+// }limpar()
