@@ -25,21 +25,45 @@ function atribuicao() {
     localStorage.setItem('colorPalette', JSON.stringify([cor1,cor2,cor3,cor4]));
     window.onload = JSON.parse(localStorage.getItem('colorPalette'));
 }
-function a (){
-    let barra = document.querySelectorAll(".color");
+// function a (){
 
-barra.forEach((item)=>{
+//     let barra = document.querySelectorAll(".color");
+
+// barra.forEach((item)=>{
 
     
-    item.addEventListener("click", function(e) {
-        e.preventDefault();
+//     item.addEventListener("click", function(e) {
+//         e.preventDefault();
       
-        barra.forEach((i) => {
-            if(i != this){
+//         barra.forEach((i) => {
+//             if(i != this){
 
-                console.log(i.classList.remove("selected"));
-            }else(console.log(i.classList.toggle('selected')))
-        }); 
+//                 console.log(i.classList.remove("selected"));
+//             }else(console.log(i.classList.toggle('selected')))
+//         }); 
+//     })
+//   });
+// }a();
+function n () {
+    let a = document.querySelectorAll('.color');
+    for (let e of a){
+    e.addEventListener('click', function () {
+        if( a != 'color'){
+            e.classList.remove('selected')
+        }
+        e.classList.toggle('selected');
+        // console.log(e)
+        return e
     })
-  });
-}a();
+    }
+ 
+}n ();
+
+function limpar() {
+    let botao = document.getElementById('clear-board');
+    let pixels = document.querySelectorAll('.pixel');
+    if (pixels != 'white'){
+        console.log('diferente')
+    }else {console.log('igual')}
+   
+}limpar()
