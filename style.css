@@ -1,35 +1,42 @@
 #black{
     background-color:black;
-}
+};
+
 #purple{
     background-color: purple;
-}
+};
+
 #blue{
     background-color: blue;
-}
+};
+
 #green {
     background-color: green;
-}
+};
+
 .selected{
     border: 1px solid black;
     display: inline-block;
     padding-left: 40px;
     padding-top: 40px;
-}
+};
+
 .color{
     border: 1px solid black;
     display: inline-block;
     padding-left: 40px;
     padding-top: 40px;
     border-radius: 50%;
-}
+};
+
 #pixel-board{
     width: 240px;
     height: 235px;
     border: 1px solid black;
     text-align: center;
     padding-top: 10px;
-}
+};
+
 .pixel{
    
     width: 40px;
@@ -42,4 +49,4 @@
     margin-bottom: 0;
     background-color: white;
     
-}
+};
