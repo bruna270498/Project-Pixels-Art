@@ -22,6 +22,7 @@
     display: inline-block;
     padding-left: 40px;
     padding-top: 40px;
+    border-radius: 50%;
 }
 #pixel-board{
     width: 240px;
@@ -41,4 +42,5 @@
     margin-right: 0;
     margin-bottom: 0;
     background-color: white;
+    
 }
