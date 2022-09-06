@@ -47,7 +47,6 @@ function devolverCor() {
     
 }
 
-// ver porque o windows não esta indo
 window.onload = devolverCor();
 
 function addRemoveSelected (elemento) {
@@ -66,10 +65,21 @@ function botaoClassSelected () {
 botaoClassSelected();
 
 function i (){
-   let o = document.querySelectorAll('.color')
+   let o = document.querySelectorAll('.pixel')
+   let p='';
    for (let u of o){
-    o.id = ''
+      for ( let r = 1; r < u;r+=1){
+        p.id = 'cor'+ r;
+      }
+      return p
    }
+}i();
+
+function t () {
+    let o = document.querySelectorAll('.pixel')
+    for( let r of o){
+        
+    }
 }
 
 function addCorWhite() {
