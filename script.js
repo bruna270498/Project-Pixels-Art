@@ -7,8 +7,6 @@ function criaBotao() {
     pai.appendChild(botao);
 }
 
-criaBotao();
-
 function gerarCor() {
     const num = '0123456789ABCDEF';
     let cor = '#';
@@ -47,8 +45,6 @@ function devolverCor() {
     
 }
 
-window.onload = devolverCor();
-
 function addRemoveSelected (elemento) {
     let selecionado = document.querySelector('.selected');
     selecionado .classList.remove('selected');
@@ -62,24 +58,16 @@ function botaoClassSelected () {
     };
 }
 
-botaoClassSelected();
+function pintarPixels () {
+    let selected = document.querySelector('.selected');
+    let pixels = document.getElementsByClassName('pixel');
 
-function i (){
-   let o = document.querySelectorAll('.pixel')
-   let p='';
-   for (let u of o){
-      for ( let r = 1; r < u;r+=1){
-        p.id = 'cor'+ r;
-      }
-      return p
-   }
-}i();
-
-function t () {
-    let o = document.querySelectorAll('.pixel')
-    for( let r of o){
-        
-    }
+    for(let pixel of pixels){
+        pixel.addEventListener('click', function(evento){
+            evento.target.style.backgroundColor= selected.style.backgroundColor;
+            console.log(i)
+        });
+    }; 
 }
 
 function addCorWhite() {
@@ -93,6 +81,14 @@ function botaoLimpar() {
     const botao = document.getElementById('clear-board');
     botao.addEventListener('click', addCorWhite);
 }
+
+criaBotao();
+
+window.onload = devolverCor();
+
+botaoClassSelected();
+
+pintarPixels();
 
 botaoLimpar();
 
