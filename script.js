@@ -39,30 +39,29 @@ function devolverCor() {
 }
 function n () {
     let a = document.querySelectorAll('.color');
-    
+
     for (let e of a){
-    e.addEventListener('click', function () {
-        if( a != 'color'){
-            e.classList.remove('selected')
-        }
+        const i = document.querySelector('.selected');
+        e.addEventListener('click', function () {
         e.classList.toggle('selected');
-        // console.log(e)
-        return e
+       
+       
+         console.log(e)
     })
     }
  
 }n ();
-function addClassWhite() {
+function addCorWhite() {
     let pixels = document.querySelectorAll('.pixel');
     for ( let o of pixels){
-        // o.classList.toggle('white');
         o.style.backgroundColor = '#FFFFFF'
-        return o;
+        // return o;
+        console.log(o)
     };
     
 }
-function limpar() {
+function botaoLimpar() {
     const botao = document.getElementById('clear-board');
-    botao.addEventListener('click', addClassWhite());
-}limpar()
+    botao.addEventListener('click', addCorWhite);
+}botaoLimpar()
 // window.onload = devolverCor()
