@@ -36,32 +36,32 @@ function devolverCor() {
     cor2.style.backgroundColor = cores[1];
     cor3.style.backgroundColor = cores[2];
     cor4.style.backgroundColor = cores[3];
+    
+    
 }
-function n () {
-    let a = document.querySelectorAll('.color');
+// ver porque o windows não esta indo
+window.onload = devolverCor();
 
-    for (let e of a){
-        const i = document.querySelector('.selected');
-        e.addEventListener('click', function () {
-        e.classList.toggle('selected');
-       
-       
-         console.log(e)
-    })
+function addRemoveSelected (elemento) {
+    let selecionado = document.querySelector('.selected');
+    selecionado .classList.remove('selected')
+    elemento.target.classList.add('selected')
+}
+function botaoClassSelected (){
+    const listaDePaleta = document.querySelectorAll('.color')
+    for( let cor of listaDePaleta){
+        cor.addEventListener('click',addRemoveSelected )
     }
- 
-}n ();
+}botaoClassSelected();
+
 function addCorWhite() {
     let pixels = document.querySelectorAll('.pixel');
     for ( let o of pixels){
         o.style.backgroundColor = '#FFFFFF'
-        // return o;
-        console.log(o)
-    };
-    
+    };  
 }
 function botaoLimpar() {
     const botao = document.getElementById('clear-board');
     botao.addEventListener('click', addCorWhite);
-}botaoLimpar()
-// window.onload = devolverCor()
+}botaoLimpar();
+
