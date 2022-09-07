@@ -14,6 +14,7 @@
     background-color: green;
 }
 
+
 .selected{
     border: 1px solid black;
     display: inline-block;
@@ -27,6 +28,10 @@
     padding-left: 40px;
     padding-top: 40px;
     border-radius: 50%;
+}
+
+h1 {
+    color: brown;
 }
 
 #pixel-board{
@@ -49,4 +54,23 @@
     margin-bottom: 0;
     background-color: white;
     
+}
+
+#clear-board {
+    margin-top: 10px;
+    margin-left: 210px;
+}
+
+#quadrado{
+    margin-top: 15px;
+}
+
+#button-random-color, #clear-board  {
+    border-radius: 20%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-style: oblique;
+    color: brown;
+    border: 1px solid crimson;
+    background-color:bisque
 }

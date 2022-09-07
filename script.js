@@ -58,17 +58,16 @@ function botaoClassSelected() {
     };
 }
 
-// function pintarPixels() {
-//     let selected = document.querySelector('.selected');
-//     let pixels = document.getElementsByClassName('pixel');
+function pintarPixels() {
+    let pixels = document.getElementsByClassName('pixel');
 
-//     for(let pixel of pixels){
-//         pixel.addEventListener('click', function(evento){
-//             evento.target.style.backgroundColor= selected.style.backgroundColor;
-//             console.log(i)
-//         });
-//     }; 
-// }
+    for(let pixel of pixels){
+        pixel.addEventListener('click', function(evento){
+            let selected = document.querySelector('.selected');
+            evento.target.style.backgroundColor= selected.style.backgroundColor;
+        });
+    }; 
+}
 
 function addCorWhite() {
     let pixels = document.querySelectorAll('.pixel');
@@ -84,11 +83,13 @@ function botaoLimpar() {
 
 criaBotao();
 
-window.onload = devolverCor();
-
 botaoClassSelected();
 
-// pintarPixels();
+pintarPixels();
 
 botaoLimpar();
+
+window.onload = devolverCor();
+
+
 
