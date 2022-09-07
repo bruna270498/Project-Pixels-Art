@@ -36,7 +36,7 @@ h1 {
 
 #pixel-board{
     width: 240px;
-    height: 235px;
+    /* height: 235px; */
     border: 1px solid black;
     text-align: center;
     padding-top: 10px;

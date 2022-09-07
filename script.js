@@ -6,6 +6,16 @@ function criaBotao() {
     const pai = document.getElementById('color-palette');
     pai.appendChild(botao);
 }
+// function f () {
+
+//     let d = document.getElementsByClassName('color');
+//    for(let r of d){
+//     r.addEventListener('click', function(){
+//         r[0].classList.add('selected')
+
+//     })}
+    
+// }f();
 
 function gerarCor() {
     const num = '0123456789ABCDEF';
@@ -60,18 +70,17 @@ function botaoClassSelected() {
 
 function pintarPixels() {
     let pixels = document.getElementsByClassName('pixel');
-    let r = [];
+    // let r = [];
     for(let pixel of pixels){
-        pixel.addEventListener('click', function(evento){
+        pixel.addEventListener('click', function(evento) {
             let selected = document.getElementsByClassName('selected');
             evento.target.style.backgroundColor= selected[0].style.backgroundColor;
-            r.push(pixel)
+            // r.push(pixel)
             // console.log(localStorage.setItem('t', JSON.stringify(r)))
             // console.log(r)
         });
-    }; 
-   
-}
+    };
+};
 
 function addCorWhite() {
     let pixels = document.querySelectorAll('.pixel');
