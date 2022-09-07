@@ -1,13 +1,13 @@
-function criaBotao () {
+function criaBotao() {
     const botao = document.createElement('button');
     botao.id = 'button-random-color';
     botao.innerText = 'Cores aleatórias';
     botao.addEventListener('click', atribuicaoCor);
     const pai = document.getElementById('color-palette');
     pai.appendChild(botao);
-};
+}
 
-function gerarCor () {
+function gerarCor() {
     const num = '0123456789ABCDEF';
     let cor = '#';
     for(let gerar=0;gerar<4;gerar+=1) {
@@ -16,9 +16,9 @@ function gerarCor () {
     if(cor !== '#FFFFFF') {
         return cor;
     };
-};
+}
 
-function atribuicaoCor () {
+function atribuicaoCor() {
     const cor1 = document.getElementById('black').style.backgroundColor='black';
     const cor2 = document.getElementById('purple').style.backgroundColor=gerarCor();
     const cor3 = document.getElementById('blue').style.backgroundColor=gerarCor();
@@ -26,9 +26,9 @@ function atribuicaoCor () {
 
     localStorage.setItem('colorPalette', JSON.stringify([cor1,cor2,cor3,cor4]));
 
-};
+}
 
-function devolverCor () {
+function devolverCor() {
     let cor1 = document.getElementById('black');
     let cor2 = document.getElementById('purple');
     let cor3 = document.getElementById('blue');
@@ -43,44 +43,44 @@ function devolverCor () {
     cor3.style.backgroundColor = cores[2];
     cor4.style.backgroundColor = cores[3];
     
-};
+}
 
-function addRemoveSelected (elemento) {
+function addRemoveSelected(elemento) {
     let selecionado = document.querySelector('.selected');
-    selecionado .classList.remove('selected');
+    selecionado.classList.remove('selected');
     elemento.target.classList.add('selected');
-};
+}
 
-function botaoClassSelected () {
+function botaoClassSelected() {
     const listaDePaleta = document.querySelectorAll('.color');
     for( let cor of listaDePaleta){
-        cor.addEventListener('click',addRemoveSelected );
+        cor.addEventListener('click',addRemoveSelected)
     };
-};
+}
 
-function pintarPixels () {
-    let selected = document.querySelector('.selected');
-    let pixels = document.getElementsByClassName('pixel');
+// function pintarPixels() {
+//     let selected = document.querySelector('.selected');
+//     let pixels = document.getElementsByClassName('pixel');
 
-    for(let pixel of pixels){
-        pixel.addEventListener('click', function(evento){
-            evento.target.style.backgroundColor= selected.style.backgroundColor;
-            console.log(i)
-        });
-    }; 
-};
+//     for(let pixel of pixels){
+//         pixel.addEventListener('click', function(evento){
+//             evento.target.style.backgroundColor= selected.style.backgroundColor;
+//             console.log(i)
+//         });
+//     }; 
+// }
 
-function addCorWhite () {
+function addCorWhite() {
     let pixels = document.querySelectorAll('.pixel');
     for ( let o of pixels){
         o.style.backgroundColor = '#FFFFFF';
     };  
-};
+}
 
-function botaoLimpar () {
+function botaoLimpar() {
     const botao = document.getElementById('clear-board');
     botao.addEventListener('click', addCorWhite);
-};
+}
 
 criaBotao();
 
@@ -88,7 +88,7 @@ window.onload = devolverCor();
 
 botaoClassSelected();
 
-pintarPixels();
+// pintarPixels();
 
 botaoLimpar();
 
