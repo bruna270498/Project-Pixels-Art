@@ -60,13 +60,17 @@ function botaoClassSelected() {
 
 function pintarPixels() {
     let pixels = document.getElementsByClassName('pixel');
-
+    let r = [];
     for(let pixel of pixels){
         pixel.addEventListener('click', function(evento){
-            let selected = document.querySelector('.selected');
-            evento.target.style.backgroundColor= selected.style.backgroundColor;
+            let selected = document.getElementsByClassName('selected');
+            evento.target.style.backgroundColor= selected[0].style.backgroundColor;
+            r.push(pixel)
+            // console.log(localStorage.setItem('t', JSON.stringify(r)))
+            // console.log(r)
         });
     }; 
+   
 }
 
 function addCorWhite() {
@@ -80,6 +84,17 @@ function botaoLimpar() {
     const botao = document.getElementById('clear-board');
     botao.addEventListener('click', addCorWhite);
 }
+
+function o (){
+    let k = document.querySelectorAll('.pixel');
+   let j = [];
+    for(let y of k){
+        j.push(y)
+        console.log(y)
+    }
+
+    // localStorage.setItem('pixelBoard', JSON.stringify(pintarPixels))
+}o()
 
 criaBotao();
 

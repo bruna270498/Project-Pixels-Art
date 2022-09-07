@@ -56,6 +56,13 @@ h1 {
     
 }
 
+/* #imagem {
+   width: 100%;
+   height: 100%;
+   position:fixed;
+} */
+
+
 #clear-board {
     margin-top: 10px;
     margin-left: 210px;
