@@ -359,7 +359,7 @@ describe('9 - Crie uma função para selecionar uma cor na paleta de cores e pre
   });
 });
 
-describe.only('10 - Crie uma função que permita preencher um pixel do quadro com a cor selecionada na paleta de cores', () => {
+describe('10 - Crie uma função que permita preencher um pixel do quadro com a cor selecionada na paleta de cores', () => {
   beforeEach(() => {
     cy.visit('./index.html');
   });

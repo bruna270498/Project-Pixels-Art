@@ -6,16 +6,6 @@ function criaBotao() {
     const pai = document.getElementById('color-palette');
     pai.appendChild(botao);
 }
-// function f () {
-
-//     let d = document.getElementsByClassName('color');
-//    for(let r of d){
-//     r.addEventListener('click', function(){
-//         r[0].classList.add('selected')
-
-//     })}
-    
-// }f();
 
 function gerarCor() {
     const num = '0123456789ABCDEF';
@@ -29,20 +19,21 @@ function gerarCor() {
 }
 
 function atribuicaoCor() {
-    const cor1 = document.getElementById('black').style.backgroundColor='black';
-    const cor2 = document.getElementById('purple').style.backgroundColor=gerarCor();
-    const cor3 = document.getElementById('blue').style.backgroundColor=gerarCor();
-    const cor4 = document.getElementById('green').style.backgroundColor=gerarCor();
+     let cor1 = document.getElementsByClassName('black')[0].style.backgroundColor='0,0,0';
+     let cor2 = document.getElementsByClassName('purple')[0].style.backgroundColor=gerarCor();
+     let cor3 = document.getElementsByClassName('blue')[0].style.backgroundColor=gerarCor();
+     let cor4 = document.getElementsByClassName('green')[0].style.backgroundColor=gerarCor();
+     
 
     localStorage.setItem('colorPalette', JSON.stringify([cor1,cor2,cor3,cor4]));
 
 }
 
 function devolverCor() {
-    let cor1 = document.getElementById('black');
-    let cor2 = document.getElementById('purple');
-    let cor3 = document.getElementById('blue');
-    let cor4 = document.getElementById('green');
+    let cor1 = document.getElementsByClassName('black')[0];
+    let cor2 = document.getElementsByClassName('purple')[0];
+    let cor3 = document.getElementsByClassName('blue')[0];
+    let cor4 = document.getElementsByClassName('green')[0];
     let cores = [cor1, cor2, cor3, cor4];
     const local = localStorage.getItem('colorPalette');
     if(local){
@@ -58,7 +49,9 @@ function devolverCor() {
 function addRemoveSelected(elemento) {
     let selecionado = document.querySelector('.selected');
     selecionado.classList.remove('selected');
-    elemento.target.classList.add('selected');
+    elemento.target.classList.add('selected')
+    
+
 }
 
 function botaoClassSelected() {
@@ -89,21 +82,19 @@ function addCorWhite() {
     };  
 }
 
-function botaoLimpar() {
-    const botao = document.getElementById('clear-board');
-    botao.addEventListener('click', addCorWhite);
-}
+const botao2 = document.getElementById('clear-board');
+botao2.addEventListener('click', addCorWhite);
 
-function o (){
-    let k = document.querySelectorAll('.pixel');
-   let j = [];
-    for(let y of k){
-        j.push(y)
-        console.log(y)
-    }
+// function o (){
+//     let k = document.querySelectorAll('.pixel');
+//    let j = [];
+//     for(let y of k){
+//         j.push(y)
+//         console.log(y)
+//     }
 
-    // localStorage.setItem('pixelBoard', JSON.stringify(pintarPixels))
-}o()
+//     // localStorage.setItem('pixelBoard', JSON.stringify(pintarPixels))
+// }o()
 
 criaBotao();
 
@@ -111,9 +102,5 @@ botaoClassSelected();
 
 pintarPixels();
 
-botaoLimpar();
-
 window.onload = devolverCor();
-
-
 
