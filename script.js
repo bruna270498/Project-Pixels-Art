@@ -63,17 +63,21 @@ function botaoClassSelected() {
 
 function pintarPixels() {
     let pixels = document.getElementsByClassName('pixel');
-    // let r = [];
+    let r = [];
     for(let pixel of pixels){
         pixel.addEventListener('click', function(evento) {
             let selected = document.getElementsByClassName('selected');
             evento.target.style.backgroundColor= selected[0].style.backgroundColor;
-            // r.push(pixel)
-            // console.log(localStorage.setItem('t', JSON.stringify(r)))
+            r.push(pixel.style.backgroundColor)
+            console.log(localStorage.setItem('t', JSON.stringify(r)))
             // console.log(r)
         });
     };
+    // console.log(localStorage.setItem('t', JSON.stringify(r)))
 };
+
+// const o = JSON.parse(localStorage.getItem('t'))
+// console.log(o)
 
 function addCorWhite() {
     let pixels = document.querySelectorAll('.pixel');
@@ -93,14 +97,25 @@ botao2.addEventListener('click', addCorWhite);
 //         console.log(y)
 //     }
 
-//     // localStorage.setItem('pixelBoard', JSON.stringify(pintarPixels))
+//     localStorage.setItem('pixelBoard', JSON.stringify(pintarPixels))
 // }o()
 
-criaBotao();
+// criaBotao();
 
-botaoClassSelected();
+// botaoClassSelected();
 
-pintarPixels();
+// pintarPixels();
 
-window.onload = devolverCor();
+window.onload = function(){
+    devolverCor();
+   
+    criaBotao();
+
+    botaoClassSelected();
+
+    pintarPixels();
+
+    const o = JSON.parse(localStorage.getItem('t'))
+    console.log(o)
+} 
 
