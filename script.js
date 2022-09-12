@@ -3,7 +3,7 @@ function criaBotao() {
     botao.id = 'button-random-color';
     botao.innerText = 'Cores aleatórias';
     botao.addEventListener('click', atribuicaoCor);
-    const pai = document.getElementById('color-palette');
+    const pai = document.getElementById('botao');
     pai.appendChild(botao);
 }
 
@@ -63,21 +63,21 @@ function botaoClassSelected() {
 
 function pintarPixels() {
     let pixels = document.getElementsByClassName('pixel');
-    let r = [];
+    
     for(let pixel of pixels){
         pixel.addEventListener('click', function(evento) {
             let selected = document.getElementsByClassName('selected');
             evento.target.style.backgroundColor= selected[0].style.backgroundColor;
-            r.push(pixel.style.backgroundColor)
-            console.log(localStorage.setItem('t', JSON.stringify(r)))
-            // console.log(r)
+            
+            let u = document.getElementsByClassName('pixel')
+            let y =[];
+            for(let w = 0; w< u.length; w+=1){
+                y.push(u[w].style.backgroundColor)
+                localStorage.setItem('pixelBoard', JSON.stringify(y))
+            }
         });
     };
-    // console.log(localStorage.setItem('t', JSON.stringify(r)))
 };
-
-// const o = JSON.parse(localStorage.getItem('t'))
-// console.log(o)
 
 function addCorWhite() {
     let pixels = document.querySelectorAll('.pixel');
@@ -89,33 +89,25 @@ function addCorWhite() {
 const botao2 = document.getElementById('clear-board');
 botao2.addEventListener('click', addCorWhite);
 
-// function o (){
-//     let k = document.querySelectorAll('.pixel');
-//    let j = [];
-//     for(let y of k){
-//         j.push(y)
-//         console.log(y)
-//     }
+criaBotao();
 
-//     localStorage.setItem('pixelBoard', JSON.stringify(pintarPixels))
-// }o()
+botaoClassSelected();
 
-// criaBotao();
-
-// botaoClassSelected();
-
-// pintarPixels();
+pintarPixels();
 
 window.onload = function(){
     devolverCor();
-   
-    criaBotao();
 
-    botaoClassSelected();
+    const pixel = document.getElementsByClassName('pixel')
 
-    pintarPixels();
+    const o = JSON.parse(localStorage.getItem('pixelBoard'))
 
-    const o = JSON.parse(localStorage.getItem('t'))
-    console.log(o)
+    if(o){
+        for(let index = 0; index<pixel.length; index+=1){
+            pixel[index].style.backgroundColor = o[index]
+        }
+
+    }
+    
 } 
 
